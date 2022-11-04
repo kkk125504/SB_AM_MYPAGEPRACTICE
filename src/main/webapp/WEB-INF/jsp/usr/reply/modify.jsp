@@ -2,7 +2,7 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <c:set var="pageTitle" value="REPLY MODIFY" />
 <%@ include file="../common/head.jspf" %>
-	<script>
+	<script>		
 		var ReplyModify__submitDone = false;
 		
 		function ReplyModify__submitForm(form){
@@ -15,17 +15,17 @@
 				alert('내용을 작성 해주세요.');
 				form.body.focus();
 				return;
-			}
+			}					
 			
 			ReplyModify__submitDone = true;
 			form.submit();		
-		}	
+		}			
 	</script>
 	
 	<section class="mt-8 text-xl">
 		<div class="container mx-auto px-3">
 			<form class="table-box-type-1" method="get" action="doModify"
-			onsubmit="ReplyModify__submitForm(this); return false;" >
+			onsubmit="ReplyModify__submitForm(this); return false;">
 				<table>
 					<colgroup>
 						<col width="200" />

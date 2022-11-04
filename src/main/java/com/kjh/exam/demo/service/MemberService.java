@@ -50,4 +50,15 @@ public class MemberService {
 		Member member = memberRepository.getMemberByNameAndEmail(name, email);
 		return member;
 	}
+
+	public ResultData doModify(int id, String loginPw, String nickname, String cellphoneNum, String email) {
+		
+		memberRepository.doModify(id,loginPw,nickname,cellphoneNum,email);
+		return null;
+	}
+
+	public boolean nicknameDuplicateCheck(String nickname) {
+	
+		return memberRepository.nicknameDuplicateCheck(nickname) ==0;
+	}
 }

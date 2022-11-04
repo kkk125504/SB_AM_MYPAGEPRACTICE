@@ -4,7 +4,7 @@
 <%@ include file="../common/head.jspf" %>
 	<section class="mt-8 text-xl">
 		<div class="container mx-auto px-3">
-			<form class="table-box-type-1" method="post" action="doCheckPassword">				
+			<form class="table-box-type-1" method="get" action="doCheckPassword">				
 				<input type="hidden" name="replaceUri" value="${param.replaceUri }"/>
 				<table class="min mx-auto">
 				<colgroup>

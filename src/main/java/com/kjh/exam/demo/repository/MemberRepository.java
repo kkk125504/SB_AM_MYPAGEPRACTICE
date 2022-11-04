@@ -18,4 +18,8 @@ public interface MemberRepository {
 
 	public Member getMemberByNameAndEmail(String name, String email);
 
+	public void doModify(int id, String loginPw, String nickname, String cellphoneNum, String email);
+
+	public int nicknameDuplicateCheck(String nickname);
+
 }

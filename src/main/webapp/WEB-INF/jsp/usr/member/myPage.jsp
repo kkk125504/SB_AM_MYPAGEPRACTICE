@@ -24,7 +24,7 @@
 							<td>${rq.loginedMember.name }</td>
 						</tr>
 						<tr>
-							<th>닉네임0</th>
+							<th>닉네임</th>
 							<td>${rq.loginedMember.nickname }</td>
 						</tr>
 						<tr>
@@ -38,7 +38,7 @@
 						<tr>
 							<th></th>
 							<td>
-								<a href="../member/checkPassword?replaceUri=${Ut.getUriEncoded('../member/modify') }" class="btn btn-active btn-ghost">회원정보 수정 </a>
+								<a href="../member/checkPassword?replaceUri=${Ut.getUriEncoded('../member/myPage') }" class="btn btn-active btn-ghost">회원정보 수정 </a>
 								<button class="btn-text-link btn btn-active btn-ghost" type="button" onclick="history.back();">뒤로가기</button>
 							</td>
 						</tr>

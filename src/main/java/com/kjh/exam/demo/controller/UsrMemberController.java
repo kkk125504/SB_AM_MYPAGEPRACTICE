@@ -132,4 +132,21 @@ public class UsrMemberController {
 		}				
 		return "usr/member/modify";
 	}
+	
+	@RequestMapping("/usr/member/doModify")
+	@ResponseBody
+	public String doModify(String loginPw, String loginPwConfirm,String nickname, String cellphoneNum, String email,String replaceUri) {		
+
+		ResultData doModifyRd =	memberService.doModify(rq.getLoginedMemberId(), loginPw,nickname,cellphoneNum,email);
+		
+		return rq.jsReplace("회원정보 수정", replaceUri);
+	}
+	@RequestMapping("/usr/member/nicknameDuplicateCheck")
+	@ResponseBody
+	public ResultData nicknameDuplicateCheck(String nickname) {		
+		boolean nicknameDuplicate = memberService.nicknameDuplicateCheck(nickname);
+		
+		
+		return ResultData.from(null, null);
+	}
 }
